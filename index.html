@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAAZ INTERNATIONAL | IT • ITES • BPO Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .hero-section {
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.05), transparent);
+        }
+
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+            transform: scale(1.02);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-img { animation: float 6s ease-in-out infinite; }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Best Logo Design (SVG) -->
+            <div class="flex items-center gap-2">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#2563eb"/>
+                    <path d="M10 28V12L20 22L30 12V28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-extrabold tracking-tighter text-slate-900">MAAZ</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-blue-600 uppercase">International</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center space-x-10">
+                <a href="#home" class="text-sm font-semibold hover:text-blue-600 transition-colors">Home</a>
+                <a href="#services" class="text-sm font-semibold hover:text-blue-600 transition-colors">Services</a>
+                <a href="#about" class="text-sm font-semibold hover:text-blue-600 transition-colors">About</a>
+                <a href="#clients" class="text-sm font-semibold hover:text-blue-600 transition-colors">Happy Clients</a>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold btn-primary">Let's Talk</a>
+            </div>
+
+            <button id="mobile-toggle" class="lg:hidden text-2xl text-slate-900">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-32 pb-20 lg:pt-48 lg:pb-32 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-2 rounded-full">
+                    <span class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
+                    <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">IT | ITES | BPO Excellence</span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-slate-900">
+                    Accelerate your <span class="gradient-text">enterprise</span> with right expertise.
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                    Catered by Maaz International, we provide a comprehensive platform offering the most reliable IT & Digital Marketing Solutions with Revenue Cycle Management.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-3">
+                        Work With Us <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative hidden lg:block">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1000" alt="Dashboard" class="rounded-3xl shadow-2xl float-img border-[12px] border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values (Work Details from Diverse Line) -->
+    <section class="py-20 bg-slate-50 border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div class="flex gap-5">
+                <div class="text-4xl text-blue-600"><i class="fas fa-certificate"></i></div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Client Satisfaction</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Achieve ultimate business goals with optimum solutions designed for performance.</p>
+                </div>
+            </div>
+            <div class="flex gap-5">
+                <div class="text-4xl text-blue-600"><i class="fas fa-handshake"></i></div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Legit Working</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Transparent work ethics seeking the best outcomes with long-term collaboration.</p>
+                </div>
+            </div>
+            <div class="flex gap-5">
+                <div class="text-4xl text-blue-600"><i class="fas fa-shield-halved"></i></div>
+                <div>
+                    <h4 class="text-xl font-bold mb-2">Securing Business</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Striving to deliver performance of utmost satisfaction in the global market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (Mirroring Reference Site) -->
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-sm font-extrabold text-blue-600 uppercase tracking-[0.3em]">Services</h2>
+                <h3 class="text-4xl lg:text-5xl font-extrabold text-slate-900">Digital, Dynamic & Diversified</h3>
+                <p class="text-slate-500 max-w-2xl mx-auto">Transforming your enterprise and excelling it to new heights with our specialized expertise.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Telemarketing -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Telemarketing</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Deliver maximum value to your emerging business with strong selling points and lead generation strategy.</p>
+                </div>
+
+                <!-- IT Recruitment -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">IT Recruitment</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Connecting you with the best technical talent to build robust digital foundations for your enterprise.</p>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Digital Marketing</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Boost your business with innovative and cut-throat techniques to dominate the digital landscape.</p>
+                </div>
+
+                <!-- Market Research -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Market Research</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Deep dive into consumer behavior and industry trends to fuel your strategic decision-making.</p>
+                </div>
+
+                <!-- Web Development -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Web Development</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Re-imagine a smarter online interface for your business and let us transform it into reality.</p>
+                </div>
+
+                <!-- Medical Revenue Management -->
+                <div class="p-8 bg-white rounded-3xl service-card">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Revenue Management</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Optimizing financial outcomes for medical entities with professional Revenue Cycle Management (RCM).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Directors) -->
+    <section id="about" class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-sm font-extrabold text-blue-400 uppercase tracking-[0.3em] mb-4">About Us</h2>
+                <h3 class="text-4xl font-extrabold mb-8">Authentic, Honest & <span class="text-blue-400">Personal Voice.</span></h3>
+                <p class="text-slate-400 leading-relaxed mb-10">
+                    We believe in perfection and crave to offer our services, best in telemarketing, information technology solutions, digital marketing, and revenue management. With the best resources & expertise, we dedicate our services to transforming your enterprise.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="border-l-2 border-blue-600 pl-6">
+                        <h5 class="font-bold text-xl">Mohammad Mohsin</h5>
+                        <p class="text-blue-400 text-sm uppercase tracking-wider font-bold">Director</p>
+                    </div>
+                    <div class="border-l-2 border-blue-600 pl-6">
+                        <h5 class="font-bold text-xl">Anugrah Tripathi</h5>
+                        <p class="text-blue-400 text-sm uppercase tracking-wider font-bold">Director</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400" class="rounded-2xl mt-8" alt="Team 1">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=400" class="rounded-2xl" alt="Team 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- Happy Clients Section -->
+    <section id="clients" class="py-24 px-6 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-sm font-extrabold text-blue-600 uppercase tracking-[0.3em] mb-4">Happy Clients</h2>
+            <h3 class="text-4xl font-extrabold text-slate-900">What they say about us</h3>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-8">
+            <!-- Review 1 -->
+            <div class="max-w-sm p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                <div class="flex gap-1 text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-slate-600 italic mb-6">"They're the real game changers when it comes to marketing. They boost your business with innovative techniques."</p>
+                <div class="font-bold text-slate-900">Michael Craven</div>
+                <div class="text-xs text-blue-600 uppercase font-bold">Digital Assets Manager</div>
+            </div>
+            <!-- Review 2 -->
+            <div class="max-w-sm p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                <div class="flex gap-1 text-yellow-400 mb-4">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="text-slate-600 italic mb-6">"Hands down to their team for quality services and support. Sky rocketed my sales and revenue in no time."</p>
+                <div class="font-bold text-slate-900">Barbara Lambert</div>
+                <div class="text-xs text-blue-600 uppercase font-bold">Senior Marketing Manager</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-[2.5rem] shadow-xl overflow-hidden grid lg:grid-cols-2">
+                <div class="p-12 lg:p-20 bg-blue-600 text-white space-y-10">
+                    <h3 class="text-4xl font-extrabold">Let's Work Together</h3>
+                    <p class="text-blue-100 leading-relaxed">Collaborate today for productive and engaging ideas to fulfill your business goals.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-phone-volume text-2xl text-blue-300"></i>
+                            <span class="text-xl font-bold">+91-7804880659</span>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <i class="fas fa-envelope-open-text text-2xl text-blue-300"></i>
+                            <span class="text-xl font-bold">info@maazinternational.org</span>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <i class="fas fa-location-dot text-2xl text-blue-300 mt-1"></i>
+                            <span class="text-lg leading-snug">126/13-N/48 N Block, Govind Nagar, Kanpur, U.P. 208006</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-12 lg:p-20 space-y-8">
+                    <h4 class="text-2xl font-extrabold">Queries? Say Hello!</h4>
+                    <form class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Full Name</label>
+                            <input type="text" class="w-full bg-slate-50 border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 transition-all outline-none" placeholder="John Doe">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Email Address</label>
+                            <input type="email" class="w-full bg-slate-50 border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 transition-all outline-none" placeholder="john@example.com">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-widest text-slate-400">Your Query</label>
+                            <textarea rows="4" class="w-full bg-slate-50 border-0 rounded-2xl px-6 py-4 focus:ring-2 focus:ring-blue-600 transition-all outline-none" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button class="w-full bg-blue-600 text-white font-extrabold py-5 rounded-2xl btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#2563eb"/>
+                    <path d="M10 28V12L20 22L30 12V28" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-lg font-extrabold tracking-tighter">MAAZ INTERNATIONAL</span>
+            </div>
+            <div class="flex gap-8 text-slate-400 text-sm font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-blue-600">Facebook</a>
+                <a href="#" class="hover:text-blue-600">Instagram</a>
+                <a href="#" class="hover:text-blue-600">LinkedIn</a>
+            </div>
+            <p class="text-slate-400 text-sm">© 2024 Maaz International. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile toggle
+        const toggle = document.getElementById('mobile-toggle');
+        const navLinks = document.querySelector('.lg\\:flex');
+        
+        // Simple scroll reveal
+        const reveal = () => {
+            const reveals = document.querySelectorAll('.service-card, h1, h3');
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].style.opacity = "1";
+                    reveals[i].style.transform = "translateY(0)";
+                }
+            }
+        };
+
+        window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>
